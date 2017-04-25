@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>Web Frameworks Week 1</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		<script src="controller.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body>	
+		<div ng-app="">
+			<h1>Kamer #12345</h1>
+			<div class="upper">
+				<b>Jouw naam</b> <input type="text" ng-model="valueName='Christiaan'">
+				<button>Join</button>
+			</div>
+			<div class="center">
+				<table>
+					<tr>
+						<th><name>Naam student</name></th>
+						<th>1 D</th>
+						<th>2 e</th>
+						<th>3 v</th>
+						<th>4 O</th>
+						<th>5 p</th>
+						<th>6 s</th>
+						<th>7</th>		
+						<th><img src="flag.png" alt="Flag" style="width:35px;height:35px;"></th>							
+					</tr>		
+					
+					<tr ng-class="{greenstyle: number1==true && number2==true && number3==true && number4==true && number5==true && number6==true && number7==true, 
+					orangestyle: name==valueName}" ng-repeat="name in ['Christiaan', 'David', 'Ernst', 'Jacob', 'Pietje']" >
+						<td> <name>{{name}} <po ng-show=name==valueName>YOU</po><name></td>
+						<td> <input type="checkbox" ng-model="number1" ng-init="number1=true"></td>
+						<td> <input type="checkbox" ng-model="number2" ng-init="number2=true"></td>
+						<td> <input type="checkbox" ng-model="number3" ng-init="number3=true"></td>
+						<td> <input type="checkbox" ng-model="number4" ng-init="number4=true"></td>
+						<td> <input type="checkbox" ng-model="number5" ng-init="number5=true"></td>
+						<td> <input type="checkbox" ng-model="number6" ng-init="number6=true"></td>
+						<td> <input type="checkbox" ng-model="number7" ng-init="number7=true"></td>	
+						<td ng-show="number1 && number2 && number3 && number4 && number5 && number6 && number7">&#9989 </td>
+					</tr>
+				</table>
+			</div>
+	    </div>
+	</body>
+</html>
